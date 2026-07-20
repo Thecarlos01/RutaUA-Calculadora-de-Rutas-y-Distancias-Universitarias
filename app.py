@@ -215,6 +215,10 @@ with col1:
     if st.session_state.ruta:
         st.success(f"✅ Ruta: {' → '.join(st.session_state.ruta)}")
         st.info(f"📏 Distancia: **{st.session_state.distancia_total} m**")
+        if st.button("❌ Ocultar ruta"):
+            st.session_state.ruta = []
+            st.session_state.distancia_total = 0
+            st.session_state.todas_rutas = []
 
     if st.session_state.todas_rutas:
         st.markdown("### 📊 Comparación de rutas")
