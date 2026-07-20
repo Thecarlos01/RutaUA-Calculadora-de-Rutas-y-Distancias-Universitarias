@@ -213,13 +213,10 @@ with col1:
     st.markdown("---")
 
     if st.session_state.ruta:
-        st.success(f"✅ Ruta: {' → '.join(st.session_state.ruta)}")
-        st.info(f"📏 Distancia: **{st.session_state.distancia_total} m**")
-        if st.button("❌ Ocultar ruta"):
-            st.session_state.ruta = []
-            st.session_state.distancia_total = 0
-            st.session_state.todas_rutas = []
-
+    st.success(f"✅ Ruta: {' → '.join(st.session_state.ruta)}")
+    st.info(f"📏 Distancia: **{st.session_state.distancia_total} m**")
+    if st.button("❌ Ocultar ruta"):
+        ...
     if st.session_state.todas_rutas:
         st.markdown("### 📊 Comparación de rutas")
         for idx, (r, peso) in enumerate(st.session_state.todas_rutas):
